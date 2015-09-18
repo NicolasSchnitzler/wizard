@@ -1,0 +1,5 @@
+{
+            "name" : "${CLASS_NAME}Plugin",
+         "version" : "0.0.1",
+    "dependencies" : []
+}

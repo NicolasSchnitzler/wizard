@@ -1,0 +1,3 @@
+    virtual void set${_NAME}(${TYPE} ${NAME}) = 0;
+    virtual ${TYPE} ${NAME}(void) const = 0;
+

@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/templates">
+        <file>templates/abstraction/class.h</file>
+        <file>templates/plugin/class.cpp</file>
+        <file>templates/plugin/class.h</file>
+        <file>templates/plugin/classPlugin.cpp</file>
+        <file>templates/plugin/classPlugin.h</file>
+        <file>templates/plugin/classPlugin.json</file>
+        <file>templates/Node/classNode.cpp</file>
+        <file>templates/Node/classNode.h</file>
+        <file>templates/Node/classNode.json</file>
+        <file>templates/stubs/abstractionInput</file>
+        <file>templates/stubs/abstractionOutput</file>
+        <file>templates/stubs/nodeCtrInput</file>
+        <file>templates/stubs/nodeCtrOutput</file>
+        <file>templates/stubs/nodePrivateInput</file>
+        <file>templates/stubs/nodePrivateOutput</file>
+    </qresource>
+</RCC>

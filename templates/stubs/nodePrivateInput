@@ -1,0 +1,2 @@
+    dtkComposerTransmitterReceiver< ${TYPE}* >     ${NAME}Recv;
+
