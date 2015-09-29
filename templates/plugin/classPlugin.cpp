@@ -2,7 +2,7 @@
 #include "${CLASS_NAME}Plugin.h"
 
 #include <dtkCore>
-#include "medCore.h"
+#include "${LAYER_NAME}.h"
 
 // ///////////////////////////////////////////////////////////////////
 // ${CLASS_NAME}Plugin
@@ -11,7 +11,7 @@
 void ${CLASS_NAME}Plugin::initialize(void)
 {
     qDebug()<<"loading filter plugin";
-    medCore::filtering::gaussian::pluginFactory().record("${CLASS_NAME}", ${CLASS_NAME}Creator);
+    ${LAYER_NAME}::${NAMESPACE}::pluginFactory().record("${CLASS_NAME}", ${CLASS_NAME}Creator);
 }
 
 void ${CLASS_NAME}Plugin::uninitialize(void)

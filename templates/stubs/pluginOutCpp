@@ -1,0 +1,4 @@
+${TYPE} ${CLASS_NAME}::${NAME}(void) const
+{
+    return m_${NAME};
+}

@@ -1,0 +1,4 @@
+void ${CLASS_NAME}::set${_NAME}(${TYPE} ${NAME})
+{
+    this->m_${NAME}=${NAME};
+}

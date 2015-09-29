@@ -24,45 +24,45 @@
    <item row="0" column="1">
     <widget class="QLineEdit" name="m_prefix"/>
    </item>
-   <item row="1" column="0">
+   <item row="3" column="0">
     <widget class="QLabel" name="label">
      <property name="text">
       <string>Layer</string>
      </property>
     </widget>
    </item>
-   <item row="1" column="1">
+   <item row="3" column="1">
     <widget class="QLineEdit" name="m_layer"/>
    </item>
-   <item row="2" column="0">
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="m_namespace"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="m_namespaceLabel">
+     <property name="text">
+      <string>namespace</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLineEdit" name="m_abstraction"/>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="m_abstractionLabel">
+     <property name="text">
+      <string>abstraction</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
     <widget class="QLabel" name="label_3">
      <property name="text">
       <string>name</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="1">
+   <item row="1" column="1">
     <widget class="QLineEdit" name="m_name"/>
-   </item>
-   <item row="3" column="0">
-    <widget class="QLabel" name="label_4">
-     <property name="text">
-      <string>namespace</string>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="1">
-    <widget class="QLineEdit" name="m_namespace"/>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_5">
-     <property name="text">
-      <string>abstraction</string>
-     </property>
-    </widget>
-   </item>
-   <item row="4" column="1">
-    <widget class="QLineEdit" name="m_abstraction"/>
    </item>
   </layout>
  </widget>

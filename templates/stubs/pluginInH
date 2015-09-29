@@ -1,0 +1,1 @@
+    virtual void set${_NAME}(${TYPE} ${NAME});

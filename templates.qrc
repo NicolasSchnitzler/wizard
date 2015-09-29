@@ -15,5 +15,10 @@
         <file>templates/stubs/nodeCtrOutput</file>
         <file>templates/stubs/nodePrivateInput</file>
         <file>templates/stubs/nodePrivateOutput</file>
+        <file>templates/stubs/pluginInCpp</file>
+        <file>templates/stubs/pluginInH</file>
+        <file>templates/stubs/pluginOutCpp</file>
+        <file>templates/stubs/pluginOutH</file>
+        <file>templates/stubs/pluginPrivateH</file>
     </qresource>
 </RCC>

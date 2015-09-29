@@ -3,12 +3,10 @@
 #include <dtkCore>
 #include <medCore.h>
 
-#include "legacy/itkFiltersGaussianProcess.h"
-
-#include <medAbstractGaussianFilter.h>
+#include <${ABSTRACTION}.h>
 
 
-class ${CLASS_NAME} : public medAbstractGaussianFilter
+class ${CLASS_NAME} : public ${ABSTRACTION}
 {
     Q_OBJECT
 
@@ -19,23 +17,19 @@ public:
 
 
 public:
-    virtual void setSigma(double sigma);
-    virtual void setData(medAbstractImageData* data);
-
+    ${PLUGIN_INPUT_H}
 public: 
-    virtual medAbstractImageData* filteredImage(void) const;
-
+    ${PLUGIN_OUTPUT_H}
 public:
     void run();
 
 private:
-    itkFiltersGaussianProcess process;
-    medAbstractImageData* res;
-
+    ${PLUGIN_INPUT_MEMBERS_H}
+    ${PLUGIN_OUTPUT_MEMBERS_H}
 };
 
 
-inline medAbstractGaussianFilter *${CLASS_NAME}Creator(void)
+inline ${ABSTRACTION} *${CLASS_NAME}Creator(void)
 {
     return new ${CLASS_NAME}();
 }

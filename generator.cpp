@@ -37,7 +37,7 @@ QString readAndReplace(QString filePath, QMap<QString,QString> pairs)
     return content;
 }
 
-QString generateIoBlocks(QMap<QString, QString> io, QString targetKey)
+QString generateIoBlocks(QMap<QString, QString> io, QString targetKey,QString className)
 {
     QString generated;
     for(QString type:io.keys())
@@ -46,6 +46,8 @@ QString generateIoBlocks(QMap<QString, QString> io, QString targetKey)
         pairs["${TYPE}"]=type;
         pairs["${NAME}"]=io[type];
         pairs["${_NAME}"]=io[type].at(0).toUpper()+io[type].mid(1);
+        if(!className.isEmpty())
+            pairs["${CLASS_NAME}"]=className;
         generated+=readAndReplace(":/templates/templates/stubs/"+targetKey,pairs)+"\n";
     }
     return generated;

@@ -1,0 +1,1 @@
+    virtual ${TYPE} ${NAME}(void) const;

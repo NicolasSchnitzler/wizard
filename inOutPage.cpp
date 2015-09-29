@@ -12,13 +12,17 @@ InOutPage::InOutPage(QWidget *parent) :
 
 QString InOutPage::inputBlock(QString key)
 {
-    return generateIoBlocks(ui->m_inputWidget->table(),key);
+    QString className=field("general.prefix").toString()+field("general.name").toString();
+    return generateIoBlocks(ui->m_inputWidget->table(),key,className);
 }
 
 QString InOutPage::outputBlock(QString key)
 {
-    return generateIoBlocks(ui->m_outputWidget->table(),key);
+    QString className=field("general.prefix").toString()+field("general.name").toString();
+    return generateIoBlocks(ui->m_outputWidget->table(),key,className);
 }
+
+
 
 InOutPage::~InOutPage()
 {

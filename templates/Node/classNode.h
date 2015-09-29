@@ -23,7 +23,3 @@ public:
 private:
     ${CLASS_NAME}Private *d;
 };
-
-//
-// medBaseWriterNode.h ends here
-

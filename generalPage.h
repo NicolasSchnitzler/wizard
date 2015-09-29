@@ -15,6 +15,10 @@ public:
     explicit GeneralPage(QWidget *parent = 0);
     ~GeneralPage();
 
+public slots:
+    void getGenerator(QString generator);
+
+
 private:
     Ui::GeneralPage *ui;
 };

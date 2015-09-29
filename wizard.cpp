@@ -9,7 +9,7 @@ Wizard::Wizard(QWidget *parent) :    QWizard(parent)
 
     GeneralPage* g=new GeneralPage;
     setPage(GENERAL_PAGE, g);
-    connect(g,SIGNAL(generatorSet(QString)),this,SLOT(getGenerator(QString)));
+    connect(p,SIGNAL(generatorSet(QString)),g,SLOT(getGenerator(QString)));
 
     m_inOutPage=new InOutPage;
     setPage(INOUTPAGE, m_inOutPage);
@@ -24,10 +24,11 @@ void Wizard::getGenerator(QString generator)
 
 void Wizard::accept()
 {
-    QString   name=field(  "general.name").toString();
-    QString prefix=field("general.prefix").toString();
-    QString  layer=field( "general.layer").toString();
-    QString  abstraction=field( "general.abstraction").toString();
+    QString           name=field("general.name"       ).toString();
+    QString         prefix=field("general.prefix"     ).toString();
+    QString          layer=field("general.layer"      ).toString();
+    QString    abstraction=field("general.abstraction").toString();
+    QString  namespaceText=field("general.namespace"  ).toString();
 
 
     QMap<QString,QString> values;
@@ -41,6 +42,7 @@ void Wizard::accept()
 
     values.insert("${LAYER_NAME}",prefix+layer);
     values.insert("${ABSTRACTION}",abstraction);
+    values.insert("${NAMESPACE}",namespaceText);
 
 
     values.insert("${ABS_INPUTS_TEXT}" , m_inOutPage->inputBlock ("abstractionInput" ));
@@ -50,6 +52,16 @@ void Wizard::accept()
     values.insert("${NODE_CTR_OUTPUT_TEXT}"    , m_inOutPage->outputBlock("nodeCtrOutput"    ));
     values.insert("${NODE_PRIVATE_INPUT_TEXT}" , m_inOutPage->inputBlock ("nodePrivateInput" ));
     values.insert("${NODE_PRIVATE_OUTPUT_TEXT}", m_inOutPage->inputBlock ("nodePrivateOutput"));
+
+    values.insert("${PLUGIN_IN_METHODS}",  m_inOutPage->inputBlock ("pluginInCpp"));
+    values.insert("${PLUGIN_OUT_METHODS}", m_inOutPage->outputBlock("pluginOutCpp"));
+
+    values.insert("${PLUGIN_INPUT_H}",  m_inOutPage->inputBlock ("pluginInH"));
+    values.insert("${PLUGIN_OUTPUT_H}", m_inOutPage->outputBlock("pluginOutH"));
+
+    values.insert("${PLUGIN_INPUT_MEMBERS_H}",  m_inOutPage->inputBlock ("pluginPrivateH"));
+    values.insert("${PLUGIN_OUTPUT_MEMBERS_H}", m_inOutPage->outputBlock("pluginPrivateH"));
+
 
     qDebug()<<m_generator;
 
