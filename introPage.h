@@ -2,6 +2,7 @@
 #define INTROPAGE_H
 
 #include <QWizardPage>
+#include <QFileDialog>
 
 namespace Ui {
 class IntroPage;
@@ -14,6 +15,9 @@ class IntroPage : public QWizardPage
 public:
     explicit IntroPage(QWidget *parent = 0);
     ~IntroPage();
+
+public slots:
+    void browse();
 
 signals:
     void generatorSet(QString);

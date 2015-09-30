@@ -30,6 +30,8 @@ void Wizard::accept()
     QString    abstraction=field("general.abstraction").toString();
     QString  namespaceText=field("general.namespace"  ).toString();
 
+    QString outputFilesPath=field("intro.path"  ).toString();
+
 
     QMap<QString,QString> values;
     if(m_generator=="node")
@@ -65,7 +67,7 @@ void Wizard::accept()
 
     qDebug()<<m_generator;
 
-    generate(m_generator,values);
+    generate(m_generator,values,outputFilesPath);
     QWizard::accept();
 
 }

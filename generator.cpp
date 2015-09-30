@@ -1,9 +1,9 @@
 #include "generator.h"
 
-void generate(QString target, QMap<QString,QString> pairs)
+void generate(QString target, QMap<QString,QString> pairs, QString path)
 {
     QDir dirIn(":/templates/templates/"+target);
-    QDir dirOut=QDir::currentPath();
+    QDir dirOut=QDir(path);
     dirOut.mkdir(target);
     dirOut.cd(target);
     qDebug()<<dirIn;

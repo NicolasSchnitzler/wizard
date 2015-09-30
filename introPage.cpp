@@ -10,7 +10,9 @@ IntroPage::IntroPage(QWidget *parent) :
     registerField("intro.abstraction",ui->m_abstraction);
     registerField("intro.plugin"     ,ui->m_plugin     );
     registerField("intro.node"       ,ui->m_node       );
+    registerField("intro.path"       ,ui->m_path       );
 
+    connect(ui->m_browse,SIGNAL(clicked(bool)),this,SLOT(browse()));
 }
 
 bool IntroPage::validatePage()
@@ -24,6 +26,11 @@ bool IntroPage::validatePage()
         generator="node";
     emit generatorSet(generator);
     return QWizardPage::validatePage();
+}
+
+void IntroPage::browse()
+{
+    ui->m_path->setText(QFileDialog::getSaveFileName(this,"Save",QString(),QString(),0,QFileDialog::ShowDirsOnly));
 }
 
 IntroPage::~IntroPage()
