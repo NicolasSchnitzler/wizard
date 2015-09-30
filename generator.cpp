@@ -11,7 +11,7 @@ void generate(QString target, QMap<QString,QString> pairs, QString path)
     for(QString file:files)
     {
         QString inFilePath=dirIn.absoluteFilePath(file);
-        QString fileOutPath=file.replace("class",pairs["${CLASS_NAME}"]);
+        QString fileOutPath=dirOut.absolutePath()+"/"+file.replace("class",pairs["${CLASS_NAME}"]);
         QFile fileOut(fileOutPath);
         if (!fileOut.open(QIODevice::WriteOnly | QIODevice::Text))
                return;

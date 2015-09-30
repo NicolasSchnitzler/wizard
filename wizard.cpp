@@ -64,7 +64,6 @@ void Wizard::accept()
     values.insert("${PLUGIN_INPUT_MEMBERS_H}",  m_inOutPage->inputBlock ("pluginPrivateH"));
     values.insert("${PLUGIN_OUTPUT_MEMBERS_H}", m_inOutPage->outputBlock("pluginPrivateH"));
 
-
     qDebug()<<m_generator;
 
     generate(m_generator,values,outputFilesPath);
