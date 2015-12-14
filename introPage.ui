@@ -28,7 +28,7 @@
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <widget class="QRadioButton" name="m_abstraction">
+       <widget class="QCheckBox" name="m_abstraction">
         <property name="text">
          <string>Abstraction</string>
         </property>
@@ -38,16 +38,22 @@
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="m_plugin">
+       <widget class="QCheckBox" name="m_plugin">
         <property name="text">
          <string>Plugin</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
         </property>
        </widget>
       </item>
       <item>
-       <widget class="QRadioButton" name="m_node">
+       <widget class="QCheckBox" name="m_node">
         <property name="text">
          <string>Node</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
         </property>
        </widget>
       </item>

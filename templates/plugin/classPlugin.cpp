@@ -10,7 +10,6 @@
 
 void ${CLASS_NAME}Plugin::initialize(void)
 {
-    qDebug()<<"loading filter plugin";
     ${LAYER_NAME}::${NAMESPACE}::pluginFactory().record("${CLASS_NAME}", ${CLASS_NAME}Creator);
 }
 

@@ -6,9 +6,6 @@
         <file>templates/plugin/classPlugin.cpp</file>
         <file>templates/plugin/classPlugin.h</file>
         <file>templates/plugin/classPlugin.json</file>
-        <file>templates/Node/classNode.cpp</file>
-        <file>templates/Node/classNode.h</file>
-        <file>templates/Node/classNode.json</file>
         <file>templates/stubs/abstractionInput</file>
         <file>templates/stubs/abstractionOutput</file>
         <file>templates/stubs/nodeCtrInput</file>
@@ -20,5 +17,8 @@
         <file>templates/stubs/pluginOutCpp</file>
         <file>templates/stubs/pluginOutH</file>
         <file>templates/stubs/pluginPrivateH</file>
+        <file>templates/node/classNode.cpp</file>
+        <file>templates/node/classNode.h</file>
+        <file>templates/node/classNode.json</file>
     </qresource>
 </RCC>

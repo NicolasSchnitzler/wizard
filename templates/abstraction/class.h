@@ -10,7 +10,7 @@
 // ${CLASS_NAME} process interface
 // ///////////////////////////////////////////////////////////////////
 
-class ${LAYER_NAME}_EXPORT ${CLASS_NAME} : public QObject, public QRunnable
+class ${_LAYER_NAME}_EXPORT ${CLASS_NAME} : public QObject, public QRunnable
 {
     Q_OBJECT
 
@@ -30,7 +30,7 @@ ${ABS_OUTPUTS_TEXT}
 // 
 // ///////////////////////////////////////////////////////////////////
 DTK_DECLARE_OBJECT        (${CLASS_NAME}*)
-DTK_DECLARE_PLUGIN        (${CLASS_NAME}, ${LAYER_NAME}_EXPORT)
-DTK_DECLARE_PLUGIN_FACTORY(${CLASS_NAME}, ${LAYER_NAME}_EXPORT)
-DTK_DECLARE_PLUGIN_MANAGER(${CLASS_NAME}, ${LAYER_NAME}_EXPORT)
+DTK_DECLARE_PLUGIN        (${CLASS_NAME}, ${_LAYER_NAME}_EXPORT)
+DTK_DECLARE_PLUGIN_FACTORY(${CLASS_NAME}, ${_LAYER_NAME}_EXPORT)
+DTK_DECLARE_PLUGIN_MANAGER(${CLASS_NAME}, ${_LAYER_NAME}_EXPORT)
 

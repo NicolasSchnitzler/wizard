@@ -30,7 +30,7 @@ bool IntroPage::validatePage()
 
 void IntroPage::browse()
 {
-    ui->m_path->setText(QFileDialog::getSaveFileName(this,"Save",QString(),QString(),0,QFileDialog::ShowDirsOnly));
+    ui->m_path->setText(QFileDialog::getExistingDirectory(this,"Save"));
 }
 
 IntroPage::~IntroPage()

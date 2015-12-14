@@ -35,7 +35,7 @@ void Wizard::accept()
 
     QMap<QString,QString> values;
     if(m_generator=="node")
-        values.insert("${CLASS_NAME}",prefix+name);
+        values.insert("${CLASS_NAME}",prefix+name+"Node");
     else if(m_generator=="abstraction")
         values.insert("${CLASS_NAME}",prefix+"Abstract"+name);
     else if(m_generator=="plugin")
@@ -43,6 +43,7 @@ void Wizard::accept()
 
 
     values.insert("${LAYER_NAME}",prefix+layer);
+    values.insert("${_LAYER_NAME}",(prefix+layer).toUpper());
     values.insert("${ABSTRACTION}",abstraction);
     values.insert("${NAMESPACE}",namespaceText);
 
@@ -53,7 +54,7 @@ void Wizard::accept()
     values.insert("${NODE_CTR_INPUT_TEXT}"     , m_inOutPage->inputBlock ("nodeCtrInput"     ));
     values.insert("${NODE_CTR_OUTPUT_TEXT}"    , m_inOutPage->outputBlock("nodeCtrOutput"    ));
     values.insert("${NODE_PRIVATE_INPUT_TEXT}" , m_inOutPage->inputBlock ("nodePrivateInput" ));
-    values.insert("${NODE_PRIVATE_OUTPUT_TEXT}", m_inOutPage->inputBlock ("nodePrivateOutput"));
+    values.insert("${NODE_PRIVATE_OUTPUT_TEXT}", m_inOutPage->outputBlock ("nodePrivateOutput"));
 
     values.insert("${PLUGIN_IN_METHODS}",  m_inOutPage->inputBlock ("pluginInCpp"));
     values.insert("${PLUGIN_OUT_METHODS}", m_inOutPage->outputBlock("pluginOutCpp"));

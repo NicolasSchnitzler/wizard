@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     iowidget.cpp \
     iolinewidget.cpp \
     generator.cpp \
-    nodepage.cpp
+    nodepage.cpp \
+    abstractionendpage.cpp
 
 HEADERS  += wizard.h \
     introPage.h \
@@ -29,14 +30,16 @@ HEADERS  += wizard.h \
     iowidget.h \
     iolinewidget.h \
     generator.h \
-    nodepage.h
+    nodepage.h \
+    abstractionendpage.h
 
 FORMS += \
     introPage.ui \
     inOutPage.ui \
     generalPage.ui \
     iolinewidget.ui \
-    nodepage.ui
+    nodepage.ui \
+    abstractionendpage.ui
 
 RESOURCES += \
     templates.qrc

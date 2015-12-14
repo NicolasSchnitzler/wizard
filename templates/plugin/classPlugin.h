@@ -1,7 +1,7 @@
 #pragma once
 
 #include <dtkCore>
-#include <medAbstractGaussianFilter.h>
+#include <${ABSTRACTION}.h>
 
 class ${CLASS_NAME}Plugin: public ${ABSTRACTION}Plugin
 {

@@ -1,2 +1,2 @@
-    this->appendReceiver(&d->${TYPE}Recv);
+    this->appendReceiver(&d->${NAME}Recv);
 
